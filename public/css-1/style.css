@@ -1,0 +1,308 @@
+body {
+  background: #c1c8e4;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+/* Title */
+h1 {
+  margin-top: 120px;
+  text-align: center;
+  color: #5ab9ea;
+  font-family: 'Creepster', cursive;
+  font-size: 85px;
+}
+h4 {
+  color: #8860D0;
+  text-align: center;
+  font-family: 'Sen', sans-serif;
+  margin-top: 17px;
+  font-size: 25px;
+}
+h3 {
+  color: #fff
+}
+
+/* Landing Page Subtitle */
+
+ #typewriter-text {
+  text-align: center;
+  font-family: 'Sen', sans-serif;
+}
+
+.typewriter-effect {
+  display: flex;
+  justify-content: center;
+  font-family: monospace;
+}
+
+.typewriter-effect > .text {
+  max-width: 0;
+  animation: typing 3s steps(var(--characters)) infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.typewriter-effect:after {
+  content: " |";
+  animation: blink 1s infinite;
+  size: 45px;
+  animation-timing-function: step-end;
+  margin-top: 47px;
+}
+
+@keyframes typing {
+  75%,
+  100% {
+    max-width: calc(var(--characters) * 1ch);
+  }
+}
+
+@keyframes blink {
+  0%,
+  75%,
+  100% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+}
+
+
+/* Navigation */
+
+.hover-nav{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+
+.hover-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.hover-nav li {
+  float: left;
+}
+
+.hover-nav li a {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  padding: 8px 12px;
+  text-decoration: none;
+  z-index: 0;
+  font-size: 23px;
+}
+
+li a:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #84ceeb;
+  z-index: -1;
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+li a:hover:before,
+li a:focus:before {
+  transform: scale(1);
+}
+
+
+/*
+Search Box on Dashboard Page
+*/
+.search {
+  display: flex;
+  justify-content: center; 
+}
+
+#search-text {
+  margin-top: 125px;
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 25px;
+  color: #fff;
+}
+
+input[type=submit] {
+  margin: auto;
+  margin-top: 25px;
+  padding: 5px 15px;
+  display: block;
+  border: none;
+  border-radius: 15px;
+  background: #5680e9;
+  color: #fff;
+  font-size: 24px;
+  size: 55px;
+  font-family: 'Sen', sans-serif;
+}
+
+#search-box {
+  display: block;
+  margin: auto;
+  border-radius: 15px;
+  border: none;
+  
+}
+
+/* Signup and Login Buttons */
+
+.button-background {
+  display:flex;
+  margin: 100px auto;
+  justify-content: center;
+  align-items: center;
+  background: #8860D0;
+  border-radius: 20px;
+  height: 375px;
+  width: 25%;
+  
+}
+
+.page-buttons {
+  position: absolute;
+}
+
+#button-one {
+  margin: 0 auto;
+  padding: 5px 15px;
+  display: block;
+  border-radius: 20px;
+  border: none;
+  background: #5680e9;
+  font-size: 25px;
+}
+#button-two {
+  margin: 0 auto;
+  padding: 5px 20px;
+  display: block;
+  border-radius: 20px;
+  background: #5680e9;
+  border: none;
+  font-size: 25px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Sigup and Login Form Page */
+#new-name, #new-email, #new-password, #auth-password, #auth-email{
+  width: 25%;
+  padding: 12px 20px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  border: none;
+  border-radius: 25px;
+}
+
+.label {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  font-family: 'Sen', sans-serif;
+  color:#fff;
+}
+
+#signup-form {
+  margin-top: 20px;
+}
+
+*/ Search Results Page */
+
+section {
+  display: grid;
+}
+
+.container-one{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  margin-top: 35px;
+}
+
+th {
+  padding: 20px 20px;
+  color:#fff;
+  font-size: 25px;
+}
+
+td {
+  text-align: center;
+  padding: 15px;
+  color: #fff;
+}
+ tr {
+   border-bottom: 1px solid #8860D0;
+ }
+
+ /* Company Profile Page and Company Financial Health Page*/
+
+
+.card {
+  align-items: center;
+  margin: 5% auto;
+  perspective: 150rem;
+  max-width: 850px;
+  box-shadow: none;
+  background: none;
+  border: none;
+}
+
+.card-side {
+  display: grid;
+  margin-top: 1%;
+  height: 35rem;
+  border-radius: 15px;
+  transition: all 0.8s ease;
+  backface-visibility: hidden;
+  width: 80%;
+  padding:2rem;
+  color: white
+}
+
+.card-side.back {
+  transform: rotateY(-180deg);
+}
+
+.card-side.front {
+  background-image: linear-gradient(160deg, #84CEEB 75%, #5AB9EA 45%);
+  background-color: #c1c8e4;
+  opacity: 0.7;
+}
+
+.categories {
+  justify-self: center;
+  margin-bottom: 75px;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+#cp {
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+}

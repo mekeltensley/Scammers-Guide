@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scammers Guide</title </head>
+
+<body>
+  <h1>Scammers Guide</h1>
+  <div class="typewriter-effect">
+    <div class="text" id="typewriter-text"></div>
+  </div>
+  <div class="button-background">
+    <div>
+      <% if (!currentUser) { %>
+        <h3>New Here?</h4>
+        <button id="button-one"><a href="/auth/signup">Signup</a></button>
+        <br>
+        <h3>Returning?</h4>
+        <button id="button-two"><a href="/auth/login">Login</a></button>
+        <% } else { %>
+            <li><a href="/auth/logout">Logout</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <% } %>
+    </div>
+  </div>
+  
+
+  <script>
+    const typeWriter = document.getElementById('typewriter-text');
+    const text = 'Beginner Investors Favorite Stock Market Resource';
+
+    typeWriter.innerHTML = text;
+    typeWriter.style.setProperty('--characters', text.length);
+    typeWriter.style.color = '#8860D0';
+    typeWriter.style.marginTop = '35px';
+    typeWriter.style.fontSize = '30px';
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Scammers Guide</title>
+</head>
+<body>
+    <h1>Scammers Guide</h1>
+    <nav class="hover-nav">
+        <ul>
+          <li class="profile"><a href="#">My Profile</a></li>
+          <li class="watchlist"><a href="#">My Watchlist</a></li>
+          <li class="logout"><a href="#">Logout</a></li>
+        </ul>
+      </nav>      
+    <div class="search">
+        <form action="/dashboard" method="POST">
+            <label id="search-text" for="symbol">Search Stock by Company Name</label>
+            <input id="search-box" type="text" name="symbol" required>
+        
+            <input type="submit" value="Search">
+        </form>  
+    </div>    
+</body>
+</html>
