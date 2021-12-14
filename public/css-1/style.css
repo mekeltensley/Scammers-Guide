@@ -22,7 +22,8 @@ h4 {
   font-size: 25px;
 }
 h3 {
-  color: #fff
+  color: #fff;
+  font-family: 'Sen', sans-serif;
 }
 
 /* Landing Page Subtitle */
@@ -101,6 +102,7 @@ h3 {
   text-decoration: none;
   z-index: 0;
   font-size: 23px;
+  font-family: 'Sen', sans-serif;
 }
 
 li a:before {
@@ -137,6 +139,7 @@ Search Box on Dashboard Page
   font-size: 30px;
   padding-bottom: 25px;
   color: #fff;
+  font-family: 'Sen', sans-serif;
 }
 
 input[type=submit] {
@@ -158,6 +161,7 @@ input[type=submit] {
   margin: auto;
   border-radius: 15px;
   border: none;
+  font-size: 30px;
   
 }
 
@@ -168,11 +172,13 @@ input[type=submit] {
   margin: 100px auto;
   justify-content: center;
   align-items: center;
-  background: #8860D0;
   border-radius: 20px;
+  background: #969899; 
+  box-shadow: 0px 10px 15px 10px rgb(0 0 0 / 15%);
+  background-color: rgb(228 228 228 / 15%);
   height: 375px;
   width: 25%;
-  
+
 }
 
 .page-buttons {
@@ -281,28 +287,78 @@ td {
   backface-visibility: hidden;
   width: 80%;
   padding:2rem;
-  color: white
+  color: white;
 }
 
 .card-side.back {
-  transform: rotateY(-180deg);
+
+  transform: rotateY(180deg);
 }
 
 .card-side.front {
+  transform: rotateY(360deg);
   background-image: linear-gradient(160deg, #84CEEB 75%, #5AB9EA 45%);
   background-color: #c1c8e4;
   opacity: 0.7;
 }
 
-.categories {
+.categories, .categories-two {
   justify-self: center;
   margin-bottom: 75px;
   font-size: 20px;
   text-decoration: underline;
 }
 
-#cp {
+#cp, #health {
   margin-top: 20px;
   font-size: 20px;
   text-align: center;
+}
+
+#financial-health, #add-watchlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:30px auto;
+  padding: 10px 10px;
+  border-radius: 20px;
+  background: #5680e9;
+  border: none;
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Profile */
+
+p {
+  margin-top: 55px;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Sen', sans-serif;
+  color: #8860D0;
+}
+
+.frosted {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.glass {
+  height: 475px;
+  width: 600px;
+  border-radius: 5px;
+  background: #969899; 
+  opacity: 0.6;
+  box-shadow: 0px 10px 15px 10px rgb(0 0 0 / 15%);
+  background-color: rgb(228 228 228 / 15%);
+}
+
+#welcome {
+  padding: 75px;
+  text-align: center;
+  font-family: 'Sen', sans-serif;
+  color:#8860D0
 }

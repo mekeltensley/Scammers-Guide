@@ -1,45 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search|Scammers Guide</title>
-</head>
-
-<body>
-    <h1>Scammers Guide</h1>
-    <nav class="hover-nav">
-        <ul>
-            <li class="profile"><a href="#">My Profile</a></li>
-            <li class="watchlist"><a href="#">My Watchlist</a></li>
-            <li class="logout"><a href="#">Logout</a></li>
-        </ul>
-    </nav>
-    <h4>Results for {} </h4>
-    <section>
-        <div class="main-panel">
-            <div class=container-one>
-                <div class="container">
-                    <table>
-                        <tr>
-                            <th>Company Name</th>
-                            <th>Ticker Symbol</th>
-                            <th>Type</th>
-                        </tr>
-                        <% for( let index = 0; index < data.result.length; index++ ) { %>
-                            <% let stock = data.result[index] %>
+<h1>Scammers Guide</h1>
+<nav class="hover-nav">
+    <ul>
+        <li class="profile"><a href="/profile">My Profile</a></li>
+        <li class="watchlist"><a href="#">My Watchlist</a></li>
+        <li class="logout"><a href="/auth/logout">Logout</a></li>
+    </ul>
+</nav>
+<br>
+<br>
+<br>
+<h4>Results</h4>
+<section>
+    <div class="main-panel">
+        <div class=container-one>
+            <div class="container">
+                <table>
+                    <tr>
+                        <th>Ticker Symbol</th>
+                        <th>Company Name</th>
+                        <th>Type</th>
+                    </tr>
+                    <% for( let index=0; index < data.result.length; index++ ) { %>
+                        <% let stock=data.result[index] %>
                             <tr>
-                               <a href="/views/company/companyProfile.ejs"><td><%= stock.description %></td></a>
-                                <td><%= stock.symbol %></td>
-                                <td><%= stock.type %></td>
-                            </tr>                      
-                        <% } %>
-                    </table>
-                </div>
+                                <td> <a href="/companyProfile/<%= stock.symbol %>">
+                                    <%= stock.symbol %>
+                                </a>
+                                </td>
+                                <td>
+                                    <%= stock.description %>
+                                </td>
+                                <td>
+                                    <%= stock.type %>
+                                </td>
+                            </tr>
+                            <% } %>
+                </table>
             </div>
         </div>
-    </section>
-</body>
-</html>
+    </div>
+</section>

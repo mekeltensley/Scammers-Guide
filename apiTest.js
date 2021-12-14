@@ -8,6 +8,10 @@ const api_key = finnhub.ApiClient.instance.authentications['api_key'];
 api_key.apiKey = key
 const finnhubClient = new finnhub.DefaultApi();
 
-finnhubClient.symbolSearch('TSLA', (error, data, response) => {
+// finnhubClient.symbolSearch('TSLA', (error, data, response) => {
+//   console.log(data)
+// });
+
+finnhubClient.companyProfile2({'symbol': 'AAPL'}, (error, data, response) => {
   console.log(data)
 });

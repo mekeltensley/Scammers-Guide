@@ -1,16 +1,19 @@
 <h1>Scammers Guide</h1>
 <nav class="hover-nav">
     <ul>
-        <li class="profile"><a href="#">My Profile</a></li>
+        <li class="profile"><a href="/profile">My Profile</a></li>
         <li class="watchlist"><a href="#">My Watchlist</a></li>
-        <li class="logout"><a href="#">Logout</a></li>
+        <li class="logout"><a href="/auth/logout">Logout</a></li>
     </ul>
 </nav>
 <div class="card">
     <div class="card-side front">
         <div id="cp">Company Profile</div>
-        <div class="categories">
-            <div>Name</div>
+        <div class="categories"></div>
+         <% //for( let index = 0; index < data.result.length; index++ ) { %>
+             <%  //let stock = data.result[index] %>
+            <div><%= //stock.name %></div>
+            <%= // JSON.stringify(data, null, 2) %> 
             <div>Description</div>
             <div>Industry</div>
             <div>Leadership</div>
@@ -19,12 +22,41 @@
             <div>Currency</div>
             <div>Exchange</div>
             <div>IPO Date</div>
+            <button id="financial-health" type="button">View Financial Health</button></button>
+        </div>
+        <% //} %>
+    </div>
+    <button id="add-watchlist" type="button">Add to Watchlist</button></button>
+    <div class="card-side back">
+        <div id="health">Financial Health</div>
+        <div class="categories-two">
+            <div>Name of Company</div>
+            <div>Description</div>
+            <div>Industry</div>
+            <div>Leadership</div>
+            <div>Ticker Symbol</div>
+            <div>Country</div>
+            <div>Currency</div>
+            <div>Exchange</div>
+            <div>IPO Date</div>
+            <button id="company-profile" type="button">View Company Profile</button></button>
         </div>
     </div>
-    <div class="card-side back">
-        <div>Financial Health</div>
-    </div>
 </div>
-<script>
 
+
+<script>
+document.addEventListener('DOMContentLoaded', function(event) {
+
+document.getElementById("financial-health").style.visibility = 'visible';
+document.getElementById("company-profile").style.visibility = 'visible';
+
+document.getElementById("financial-health").onclick = function() {
+document.querySelector(".card-side").classList.toggle("back");
+};
+
+document.getElementById("company-profile").onclick = function() {
+document.querySelector(".card-side").classList.toggle("back");
+};
+});
 </script>
