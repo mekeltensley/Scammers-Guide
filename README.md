@@ -2,13 +2,29 @@
 
 A Beginner Investor Web Application that allows users to search stocks and receive relevant information needed to make decisions on whether a stock is worth investing into.
 
+[Click Here](https://travel-blog-us.herokuapp.com/) to preview.
+
 ## DEMO
 
 ![Stock Market Investing App](stockapp.gif)
 
-`5` Verify that model looks like the following code snippet ( [here](https://github.com/romebell/express_authentication/blob/main/solutions.md#1-userjs) )
+## HOW TO USE 
 
-## Technologies and Tools Used 
+`1` Create a new account or login to existing account 
+
+
+`2` Using the search box, search for any company stock you are interested in investing into 
+
+
+`3` From the search page, click any stock ticker symbol to view the company profile and company financials
+
+
+`4` If you like the company and think this company will do well over the long term, simply add the stock to your watchlist
+
+
+`5` Congrats! You are officially a beginner investor 
+
+## Technologies and Tools Used
 
 * Sequelize user model / migration
 * Passport and passport-local for authentication
@@ -21,30 +37,27 @@ A Beginner Investor Web Application that allows users to search stocks and recei
 * HTML 
 * CSS
 
-### User Model
+## API Used
+`1`  FinnHub Stock API ( [here](http://finnhub.io) )
 
-| Column Name | Data Type | Notes |
-| --------------- | ------------- | ------------------------------ |
-| id | Integer | Serial Primary Key, Auto-generated |
-| name | String | Must be provided |
-| email | String | Must be unique / used for login |
-| password | String | Stored as a hash |
-| createdAt | Date | Auto-generated |
-| updatedAt | Date | Auto-generated |
+### `Installation Requirements` 
 
-### Default Routes
+`1` Fork and clone this repository 
+`2` Run `npm install` in terminal
+
+
+
+### API Routes
 
 | Method | Path | Location | Purpose |
 | ------ | ---------------- | -------------- | ------------------- |
-| GET | / | server.js | Home page |
+| GET | / | server.js | Sign Up  and Login Page |
 | GET | /auth/login | auth.js | Login form |
 | GET | /auth/signup | auth.js | Signup form |
 | POST | /auth/login | auth.js | Login user |
 | POST | /auth/signup | auth.js | Creates User |
-| GET | /auth/logout | auth.js | Removes session info |
-| GET | /profile | server.js | Regular User Profile |
-
-
-
-`5` Verify that model looks like the following code snippet ( [here](https://github.com/romebell/express_authentication/blob/main/solutions.md#1-userjs) )
-
+| GET | /auth/logout | auth.js | Removes session info and logs out user |
+| GET | /profile | server.js | Displays user profile |
+| GET | /search | controllers/search.js | Allows user to search a stock
+| POST | /dashboard | controllers/dashboard.js | Displays search results
+| GET | /companyProfile | controllers/companyProfile.js | Allows users to view company profile and financials
