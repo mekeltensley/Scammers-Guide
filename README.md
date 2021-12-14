@@ -43,6 +43,8 @@ A Beginner Investor Web Application that allows users to search stocks and recei
 ### `Installation Requirements` 
 
 `1` Fork and clone this repository 
+
+
 `2` Run `npm install` in terminal
 
 
