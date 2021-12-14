@@ -2,7 +2,7 @@
 
 A Beginner Investor Web Application that allows users to search stocks and receive relevant information needed to make decisions on whether a stock is worth investing into.
 
-[Click Here](https://travel-blog-us.herokuapp.com/) to preview.
+[Click Here](https://scammers-guide.herokuapp.com/) to preview.
 
 ## DEMO
 
