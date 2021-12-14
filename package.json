@@ -33,6 +33,7 @@
     "express-session": "^1.17.2",
     "faker": "^5.5.3",
     "finnhub": "^1.2.8",
+    "heroku": "^7.59.2",
     "method-override": "^3.0.0",
     "morgan": "^1.10.0",
     "node-fetch": "^2.6.2",
@@ -40,6 +41,7 @@
     "passport-local": "^1.0.0",
     "pg": "^8.5.1",
     "sequelize": "^6.11.0",
+    "sequelize-cli": "^6.3.0",
     "unsplash-js": "^7.0.15"
   },
   "devDependencies": {
