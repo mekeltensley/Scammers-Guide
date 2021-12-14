@@ -12,6 +12,10 @@ const finnhubClient = new finnhub.DefaultApi();
 //   console.log(data)
 // });
 
-finnhubClient.companyProfile2({'symbol': 'AAPL'}, (error, data, response) => {
+// finnhubClient.companyProfile2({'symbol': 'AAPL'}, (error, data, response) => {
+//   console.log(data)
+// });
+
+finnhubClient.companyBasicFinancials("AAPL", "all", (error, data, response) => {
   console.log(data)
 });

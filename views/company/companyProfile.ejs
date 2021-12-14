@@ -8,37 +8,79 @@
 </nav>
 <div class="card">
     <div class="card-side front">
-        <div id="cp">Company Profile</div>
+        <div id="cp">  <%= data.name %> Profile</div>
         <div class="categories"></div>
-         <% //for( let index = 0; index < data.result.length; index++ ) { %>
-             <%  //let stock = data.result[index] %>
-            <div><%= //stock.name %></div>
-            <%= // JSON.stringify(data, null, 2) %> 
-            <div>Description</div>
-            <div>Industry</div>
-            <div>Leadership</div>
-            <div>Ticker Symbol</div>
-            <div>Country</div>
-            <div>Currency</div>
-            <div>Exchange</div>
-            <div>IPO Date</div>
+            <div>
+                <p>Company Name</p>
+                <%= data.name %>
+            </div>
+            <div>
+                <p>Ticker Symbol</p>
+                <%= data.ticker %> 
+            </div>
+            <div>
+                <p>Country</p>
+                <%= data.country %> 
+            </div>
+            <div>
+                <p>Currency</p>
+                <% data.currency %> 
+            </div>
+            <div>
+                <p>Exchange</p> 
+                <%= data.exchange %> 
+            </div>
+            <div>
+                <p>IPO Date</p>
+                <%= data.ipo %> 
+            </div>
             <button id="financial-health" type="button">View Financial Health</button></button>
         </div>
-        <% //} %>
     </div>
     <button id="add-watchlist" type="button">Add to Watchlist</button></button>
     <div class="card-side back">
         <div id="health">Financial Health</div>
         <div class="categories-two">
-            <div>Name of Company</div>
-            <div>Description</div>
-            <div>Industry</div>
-            <div>Leadership</div>
-            <div>Ticker Symbol</div>
-            <div>Country</div>
-            <div>Currency</div>
-            <div>Exchange</div>
-            <div>IPO Date</div>
+            <div>
+                <p>Symbol</p>
+                <%= //otherData.symbol %> 
+            <div>
+            <div>
+                <p>Market Capitilization</p>
+                <%= //otherData.metric.marketCapitalization %>
+            </div>
+            <div>
+                <p>Current Ratio</p>
+                <%= //otherData.series.annual.currentRatio[0].v %>
+            </div>
+            <div>
+                <p>Sales per Share</p>
+                <%= //otherData.series.annual.salesPerShare[0].v %>
+            </div>
+            <div>
+                <p>Beta</p>
+                <%= //otherData.metric.beta %>
+            </div>
+            <div>
+                <p>100 Day Average Trading Volume</p>
+                <%= //otherData.metric.100DayAverageTradingVolume %>
+            </div>
+            <div>
+                <p>52 Week Low</p>
+                <%= //otherData.metric.52WeekLow %>
+            </div>
+            <div>
+                <p>52 Week Low Date</p>
+                <%= //otherData.metric.52WeekLowDate %> 
+            </div>
+            <div>
+                <p>52 Week High</p>
+                <%= //otherData.metric.52WeekHigh %> 
+            </div>
+            <div>
+                <p>52 Week High Date</p>
+                <%= //otherData.metric.52WeekHighDate %> 
+            </div>
             <button id="company-profile" type="button">View Company Profile</button></button>
         </div>
     </div>

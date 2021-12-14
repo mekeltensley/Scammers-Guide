@@ -7,6 +7,19 @@ a {
   color: #fff;
   font-family: 'Sen', sans-serif;
 }
+
+div {
+  font-size: 20px;
+
+}
+
+p {
+  color:#8860D0;
+  font-size: 20px;
+  text-decoration: underline;
+  font-family: 'Sen', sans-serif;
+
+}
 /* Title */
 h1 {
   margin-top: 120px;
@@ -285,7 +298,6 @@ td {
 .card-side {
   display: grid;
   margin-top: 1%;
-  height: 35rem;
   border-radius: 15px;
   transition: all 0.8s ease;
   backface-visibility: hidden;
@@ -306,15 +318,12 @@ td {
 
 .categories, .categories-two {
   justify-self: center;
-  margin-bottom: 75px;
-  font-size: 20px;
-  text-decoration: underline;
-  font-family: 'Sen', sans-serif;
+  margin-bottom: 55px;
 }
 
 #cp, #health {
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
   font-family: 'Sen', sans-serif;
 }
@@ -336,7 +345,7 @@ td {
 
 /* Profile */
 
-p {
+#name, #email {
   margin-top: 55px;
   text-align: center;
   font-size: 20px;

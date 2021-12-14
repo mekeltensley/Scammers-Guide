@@ -38,7 +38,7 @@ router.post('/signup', async (req, res) => {
           // if created, success and we will redirect back to / page
           console.log(`----- ${user.name} was created -----`);
           const successObject = {
-              successRedirect: '/',
+              successRedirect: '/search',
               successFlash: `Welcome ${user.name}. Account was created and logging in...`
           }
           // 
